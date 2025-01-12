@@ -1,0 +1,148 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html --><!DOCTYPE idea-plugin [
+    <!ELEMENT idea-plugin (id|name|vendor|description|depends|extensions|actions)*>
+    <!ELEMENT id (#PCDATA)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT vendor (#PCDATA)>
+    <!ATTLIST vendor
+        email CDATA #REQUIRED
+        url CDATA #REQUIRED>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT depends (#PCDATA)>
+    <!ELEMENT extensions (applicationService|applicationConfigurable)*>
+    <!ATTLIST extensions
+        defaultExtensionNs CDATA #REQUIRED>
+    <!ELEMENT applicationService (#PCDATA)>
+    <!ATTLIST applicationService
+        serviceImplementation CDATA #REQUIRED>
+    <!ELEMENT applicationConfigurable (#PCDATA)>
+    <!ATTLIST applicationConfigurable
+        parentId CDATA #REQUIRED
+        instance CDATA #REQUIRED
+        id CDATA #REQUIRED
+        displayName CDATA #REQUIRED>
+    <!ELEMENT actions (action)*>
+    <!ELEMENT action (add-to-group|keyboard-shortcut)*>
+    <!ATTLIST action
+        id CDATA #REQUIRED
+        class CDATA #REQUIRED
+        text CDATA #REQUIRED
+        description CDATA #REQUIRED>
+    <!ELEMENT add-to-group (#PCDATA)>
+    <!ATTLIST add-to-group
+        anchor CDATA #REQUIRED
+        group-id CDATA #REQUIRED>
+    <!ELEMENT keyboard-shortcut (#PCDATA)>
+    <!ATTLIST keyboard-shortcut
+        keymap CDATA #REQUIRED
+        first-keystroke CDATA #REQUIRED>
+    ]>
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.github.qczone.switch2cursor</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Switch2Cursor</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="quchaozhong@gmail.com" url="https://github.com/qczone">qczone</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    <p>Switch2Cursor 是一个 JetBrains IDE 插件，可以让你在 IDE 和 Cursor 之间无缝切换，并保持精确的光标位置。</p>
+
+    <h2>主要特性</h2>
+    <ul>
+        <li>一键在 Cursor 中打开文件</li>
+        <li>精确保持光标位置（行号和列号）</li>
+        <li>支持在 Cursor 中打开整个项目</li>
+        <li>便捷的快捷键（可自定义）:
+            <ul>
+                <li>Alt+Shift+O - 打开当前文件</li>
+                <li>Alt+Shift+P - 打开当前项目</li>
+            </ul>
+        </li>
+        <li>多种访问方式：快捷键、右键菜单、工具菜单</li>
+    </ul>
+
+    <h2>使用方法</h2>
+    <ul>
+        <li>打开当前文件:
+            <ul>
+                <li>按下 Alt+Shift+O</li>
+                <li>在编辑器中右键 → Open File In Cursor</li>
+                <li>工具菜单 → Open File In Cursor</li>
+            </ul>
+        </li>
+        <li>打开项目:
+            <ul>
+                <li>按下 Alt+Shift+P</li>
+                <li>在项目视图中右键 → Open Project In Cursor</li>
+                <li>工具菜单 → Open Project In Cursor</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>配置说明</h2>
+    <ul>
+        <li>进入 Settings/Preferences → Tools → Switch2Cursor</li>
+        <li>设置 Cursor 可执行文件路径（默认为 "cursor"）</li>
+        <li>通过 Keymap 设置自定义快捷键</li>
+    </ul>
+
+    <h2>系统要求</h2>
+    <ul>
+        <li>已安装 Cursor Editor (<a href="https://cursor.sh">https://cursor.sh</a>)</li>
+        <li>兼容所有 JetBrains IDE</li>
+        <li>支持的 IDE 版本：2024.1 及以上</li>
+    </ul>
+    ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.github.qczone.switch2cursor.settings.AppSettingsState"/>
+        <applicationConfigurable
+            parentId="tools"
+            instance="com.github.qczone.switch2cursor.settings.AppSettingsConfigurable"
+            id="com.github.qczone.switch2cursor.settings.AppSettingsConfigurable"
+            displayName="Switch2Cursor"/>
+    </extensions>
+
+    <actions>
+        <action id="OpenFileInCursor" class="com.github.qczone.switch2cursor.actions.OpenFileInCursorAction"
+            text="Open File In Cursor" description="Open current file in Cursor">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt shift O"/>
+        </action>
+
+        <action id="OpenProjectInCursor" class="com.github.qczone.switch2cursor.actions.OpenProjectInCursorAction"
+            text="Open Project In Cursor" description="Open current project in Cursor">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+            <add-to-group group-id="DirectoryChooserPopupMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt shift P"/>
+        </action>
+    </actions>
+
+    <version>1.0.0</version>
+
+    <idea-version since-build="241" until-build="243.*"/>
+
+    <change-notes><![CDATA[
+        <h3>1.0.0</h3>
+        <ul>
+            <li>✨ 支持在 Cursor 中打开文件和项目</li>
+            <li>🔧 支持配置 Cursor 可执行文件路径</li>
+            <li>⌨️ 支持快捷键、右键菜单和工具栏访问</li>
+        </ul>
+    ]]></change-notes>
+</idea-plugin>
