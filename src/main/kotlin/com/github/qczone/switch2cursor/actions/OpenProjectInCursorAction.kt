@@ -5,7 +5,6 @@ import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.project.Project
-import java.io.File
 import com.intellij.openapi.actionSystem.ActionUpdateThread
 
 class OpenProjectInCursorAction : AnAction() {
