@@ -51,6 +51,56 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
+    <p>Switch2Cursor is a JetBrains IDE plugin that enables seamless switching between IDE and Cursor while maintaining precise cursor position.</p>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li>Open files in Cursor with one click</li>
+        <li>Maintain exact cursor position (line and column)</li>
+        <li>Support opening entire projects in Cursor</li>
+        <li>Convenient shortcuts (customizable):
+            <ul>
+                <li>Alt+Shift+O - Open current file</li>
+                <li>Alt+Shift+P - Open current project</li>
+            </ul>
+        </li>
+        <li>Multiple access methods: shortcuts, context menu, tools menu</li>
+    </ul>
+
+    <h2>Usage</h2>
+    <ul>
+        <li>Open current file:
+            <ul>
+                <li>Press Alt+Shift+O</li>
+                <li>Right-click in editor → Open File In Cursor</li>
+                <li>Tools menu → Open File In Cursor</li>
+            </ul>
+        </li>
+        <li>Open project:
+            <ul>
+                <li>Press Alt+Shift+P</li>
+                <li>Right-click in project view → Open Project In Cursor</li>
+                <li>Tools menu → Open Project In Cursor</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Configuration</h2>
+    <ul>
+        <li>Go to Settings/Preferences → Tools → Switch2Cursor</li>
+        <li>Set Cursor executable path (default is "cursor")</li>
+        <li>Customize shortcuts in Keymap settings</li>
+    </ul>
+
+    <h2>Requirements</h2>
+    <ul>
+        <li>Cursor Editor installed (<a href="https://cursor.sh">https://cursor.sh</a>)</li>
+        <li>Compatible with all JetBrains IDEs</li>
+        <li>Supported IDE versions: 2024.1 and above</li>
+    </ul>
+
+    <hr/>
+
     <p>Switch2Cursor 是一个 JetBrains IDE 插件，可以让你在 IDE 和 Cursor 之间无缝切换，并保持精确的光标位置。</p>
 
     <h2>主要特性</h2>
@@ -139,6 +189,14 @@
 
     <change-notes><![CDATA[
         <h3>1.0.0</h3>
+        <ul>
+            <li>✨ Support opening files and projects in Cursor</li>
+            <li>🔧 Configure Cursor executable path</li>
+            <li>⌨️ Access via shortcuts, context menu and toolbar</li>
+        </ul>
+
+        <hr/>
+
         <ul>
             <li>✨ 支持在 Cursor 中打开文件和项目</li>
             <li>🔧 支持配置 Cursor 可执行文件路径</li>
