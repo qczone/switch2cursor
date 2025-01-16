@@ -2,6 +2,8 @@
 
 Switch2Cursor 是一个 JetBrains IDE 插件，可以让你在 IDE 和 Cursor 之间无缝切换，并保持精确的光标位置。
 
+![Switch2Cursor演示](images/switch-show.gif)
+
 ## 主要特性
 
 - 🚀 无缝切换编辑器
@@ -20,12 +22,8 @@ Switch2Cursor 是一个 JetBrains IDE 插件，可以让你在 IDE 和 Cursor �
 
 ## 安装方法
 
-1. 打开 JetBrains IDE
-2. 进入 Settings/Preferences → Plugins
-3. 点击 "Browse repositories..."
-4. 搜索 "Switch2Cursor"
-5. 点击 "Install"
-6. 重启 IDE
+1. 在 [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/26309-switch2cursor) 下载插件
+2. 或者在 IDE 中 搜索 "switch2cursor" 安装
 
 ## 使用方法
 
