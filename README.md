@@ -2,7 +2,7 @@
 
 > 推荐在 Cursor 中配合 [Switch2IDEA](https://github.com/qczone/switch2idea) 使用，效果更佳
 
-Switch2Cursor 是一个 JetBrains IDE 插件，可以让你在 IDE 和 Cursor 
+Switch2Cursor 是一个 JetBrains IDE 插件，可以让你在 IDE 和 Cursor 之间无缝切换，并保持精确的光标位置。
 
 ![Switch2Cursor演示](images/switch-show.gif)
 
