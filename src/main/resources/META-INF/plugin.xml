@@ -183,11 +183,22 @@
         </action>
     </actions>
 
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <idea-version since-build="241" until-build="243.*"/>
 
     <change-notes><![CDATA[
+        <h3>1.0.1</h3>
+        <ul>
+            <li>🐛 Fix the issue of not being able to activate the Cursor window on Windows</li>
+        </ul>
+
+        <hr/>
+        
+        <ul>
+            <li>🐛 修复在 Windows 上无法激活 Cursor 窗口的问题</li>
+        </ul>
+        
         <h3>1.0.0</h3>
         <ul>
             <li>✨ Support opening files and projects in Cursor</li>

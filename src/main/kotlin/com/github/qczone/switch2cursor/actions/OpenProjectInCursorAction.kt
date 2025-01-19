@@ -1,6 +1,7 @@
 package com.github.qczone.switch2cursor.actions
 
 import com.github.qczone.switch2cursor.settings.AppSettingsState
+import com.github.qczone.switch2cursor.utils.WindowUtils
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.diagnostic.Logger
@@ -52,6 +53,8 @@ class OpenProjectInCursorAction : AnAction() {
                 "Error"
             )
         }
+
+        WindowUtils.activeWindow()
     }
 
     override fun update(e: AnActionEvent) {
