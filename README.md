@@ -51,7 +51,7 @@ Switch2Cursor 是一个 JetBrains IDE 插件，可以让你在 IDE 和 Cursor �
 
 - 已安装 Cursor (https://cursor.sh)
 - 兼容所有 JetBrains IDE
-- 支持的 IDE 版本：2024.1 及以上
+- 支持的 IDE 版本：2022.3 及以上
 
 ## 从源码构建
 

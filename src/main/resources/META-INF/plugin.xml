@@ -96,7 +96,7 @@
     <ul>
         <li>Cursor Editor installed (<a href="https://cursor.sh">https://cursor.sh</a>)</li>
         <li>Compatible with all JetBrains IDEs</li>
-        <li>Supported IDE versions: 2024.1 and above</li>
+        <li>Supported IDE versions: 2022.3 and above</li>
     </ul>
 
     <hr/>
@@ -146,7 +146,7 @@
     <ul>
         <li>已安装 Cursor Editor (<a href="https://cursor.sh">https://cursor.sh</a>)</li>
         <li>兼容所有 JetBrains IDE</li>
-        <li>支持的 IDE 版本：2024.1 及以上</li>
+        <li>支持的 IDE 版本：2022.3 及以上</li>
     </ul>
     ]]></description>
 
@@ -178,16 +178,23 @@
             text="Open Project In Cursor" description="Open current project in Cursor">
             <add-to-group group-id="ToolsMenu" anchor="first"/>
             <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
-            <add-to-group group-id="DirectoryChooserPopupMenu" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="alt shift P"/>
         </action>
     </actions>
 
-    <version>1.0.1</version>
-
-    <idea-version since-build="241" until-build="243.*"/>
-
     <change-notes><![CDATA[
+        <h3>1.0.2</h3>
+        <ul>
+            <li>⚡️ Support JetBrains IDEs from version 2022.3</li>
+            <li>🐛 Fix DirectoryChooserPopupMenu registration issue</li>
+        </ul>
+
+        <hr/>
+
+        <ul>
+            <li>⚡️ 支持 JetBrains IDEs 2022.3 开始以及以后的版本</li>
+            <li>🐛 修复 DirectoryChooserPopupMenu 注册问题</li>
+        </ul>
         <h3>1.0.1</h3>
         <ul>
             <li>🐛 Fix the issue of not being able to activate the Cursor window on Windows</li>

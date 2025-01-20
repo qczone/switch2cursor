@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.github.qczone"
-version = "1.0.1"
+version = "1.0.2"
 
 
 repositories {
@@ -15,7 +15,7 @@ repositories {
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2024.1.7")
+    version.set("2022.3")
     type.set("IC") // Target IDE Platform
     pluginName.set("Switch2Cursor")
     updateSinceUntilBuild.set(true)
@@ -35,8 +35,8 @@ tasks {
     }
 
     patchPluginXml {
-        sinceBuild.set("241")
-        untilBuild.set("243.*")
+        sinceBuild.set("223")
+        untilBuild.set("")
     }
 
     signPlugin {
