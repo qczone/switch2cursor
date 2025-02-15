@@ -15,7 +15,7 @@ class OpenFileInCursorAction : AnAction() {
     private val logger = Logger.getInstance(OpenFileInCursorAction::class.java)
 
     override fun getActionUpdateThread(): ActionUpdateThread {
-        return ActionUpdateThread.EDT
+        return ActionUpdateThread.BGT
     }
 
     override fun actionPerformed(e: AnActionEvent) {

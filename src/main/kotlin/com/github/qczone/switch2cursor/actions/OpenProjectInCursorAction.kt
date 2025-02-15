@@ -12,7 +12,7 @@ class OpenProjectInCursorAction : AnAction() {
     private val logger = Logger.getInstance(OpenProjectInCursorAction::class.java)
 
     override fun getActionUpdateThread(): ActionUpdateThread {
-        return ActionUpdateThread.EDT
+        return ActionUpdateThread.BGT
     }
 
     override fun actionPerformed(e: AnActionEvent) {
