@@ -1,82 +1,119 @@
 # Switch2Cursor
 
-> 推荐在 Cursor 中配合 [Switch2IDEA](https://github.com/qczone/switch2idea) 使用，效果更佳
+[中文文档](README_zh.md)
 
-Switch2Cursor 是一个 JetBrains IDE 插件，可以让你在 IDE 和 Cursor 之间无缝切换，并保持精确的光标位置。
+> 💡 Recommended to use with [Switch2IDEA](https://github.com/qczone/switch2idea) in Cursor
 
-![Switch2Cursor演示](images/switch-show.gif)
 
-## 主要特性
+[![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/26309-switch2cursor?label=JetBrains%20Marketplace&style=for-the-badge&logo=intellij-idea)](https://plugins.jetbrains.com/plugin/26309-switch2cursor)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/26309-switch2cursor?style=for-the-badge&logo=intellij-idea)](https://plugins.jetbrains.com/plugin/26309-switch2cursor)
+[![License](https://img.shields.io/github/license/qczone/switch2cursor?style=for-the-badge)](LICENSE)
 
-- 🚀 无缝切换编辑器
-  - 在 JetBrains IDE 和 Cursor 之间一键切换
-  - 自动定位到相同的光标位置（行号和列号）
-  - 完美保持编辑上下文，不中断思路
+## 🔍 Introduction
+A JetBrains IDE plugin that enhances development efficiency by enabling seamless switching between JetBrains IDE and Cursor
 
-- ⌨️ 便捷的快捷键
-  - `Alt+Shift+O` - 在 Cursor 中打开当前文件
-  - `Alt+Shift+P` - 在 Cursor 中打开整个项目
+![Switch2Cursor Demo](images/switch-show.gif)
 
-- 🔧 多种访问方式
-  - 快捷键操作
-  - 编辑器右键菜单
-  - IDE 工具菜单
+## 🌟 Features
 
-## 安装方法
+- 🚀 Seamless Editor Switching
+  - One-click switch between JetBrains IDE and Cursor
+  - Automatically positions to the same cursor location (line and column)
+  - Perfectly maintains editing context without interrupting workflow
 
-1. 在 [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/26309-switch2cursor) 下载插件
-2. 或者在 IDE 中 搜索 "switch2cursor" 安装
+- ⌨️ Convenient Shortcut Support
+  - macOS:
+    - `Option+Shift+P` - Open project in Cursor
+    - `Option+Shift+O` - Open current file in Cursor
+  - Windows:
+    - `Alt+Shift+P` - Open project in Cursor
+    - `Alt+Shift+O` - Open current file in Cursor
 
-## 使用方法
+- 🔧 Multiple Access Methods
+  - Keyboard shortcuts
+  - Editor context menu
+  - IDE tools menu
 
-### 打开当前文件
+## 🛠️ Installation Guide
 
-- 按下 `Alt+Shift+O`
-- 在编辑器中右键 → Open File In Cursor
-- 工具菜单 → Open File In Cursor
+### Method 1: Install via JetBrains Marketplace
+1. Open IDE → `Settings` → `Plugins` → `Marketplace`
+2. Search for switch2cursor
+3. Click `Install` to complete installation
+4. Click `OK` to apply changes
 
-### 打开项目
+### Method 2: Local Installation
+1. Download the latest plugin package from [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/26309-switch2cursor)
+2. IDE → `Settings` → `Plugins` → `⚙️`→ `Install Plugin from Disk...`
+3. Select the downloaded plugin package
+4. Click `OK` to apply changes
 
-- 按下 `Alt+Shift+P`
-- 在项目视图中右键 → Open Project In Cursor
-- 工具菜单 → Open Project In Cursor
 
-## 配置说明
+## 🚀 Usage Guide
 
-1. 进入 Settings/Preferences → Tools → Switch2Cursor
-2. 设置 Cursor 可执行文件路径（默认为 "cursor"）
-3. 通过 Keymap 设置自定义快捷键
+### Basic Usage
 
-## 系统要求
+#### Open Project
+- Shortcuts:
+  - macOS: `Option+Shift+P` 
+  - Windows: `Alt+Shift+P`
+- Context Menu: Right-click in project view → `Open Project In Cursor`
+- Tools Menu: `Tools` → `Open Project In Cursor`
 
-- 已安装 Cursor (https://cursor.sh)
-- 兼容所有 JetBrains IDE
-- 支持的 IDE 版本：2022.3 及以上
+#### Open Current File
+- Shortcuts:
+  - macOS: `Option+Shift+O` 
+  - Windows: `Alt+Shift+O`
+- Context Menu: Right-click in editor → `Open File In Cursor`
+- Tools Menu: `Tools` → `Open File In Cursor`
 
-## 从源码构建
+### Configuration
+- In `Settings/Preferences` → `Tools` → `Switch2Cursor`:
+  - Set Cursor executable path (default is "cursor")
+  - Customize shortcuts through Keymap settings
 
-1. 克隆仓库：
+### Requirements
+- [Cursor](https://cursor.com) installed
+- Compatible with all JetBrains IDEs (version 2022.3 and above)
 
+## 🧑‍💻 Developer Guide
+
+### Build Project
 ```bash
+# Clone repository
 git clone https://github.com/qczone/switch2cursor.git
+
+# Build plugin
+cd switch2cursor
+./gradlew buildPlugin  
+# Plugin package will be generated in build/distributions/ directory
 ```
 
-2. 使用 Gradle 构建：
+### Contributing
+1. Fork this repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Submit a Pull Request
 
-```bash
-./gradlew buildPlugin
-```
+## 🙋 FAQ 
 
-3. 插件将生成在 `build/distributions/` 目录下
+### 1. Why doesn't the shortcut/menu click switch to Cursor after installation?
+Check if the correct Cursor executable path is configured in `Settings` → `Tools` → `Switch2Cursor`
 
-## 贡献代码
+### 2. Which IDEs are supported?
+Supports all JetBrains IDEs, including: IntelliJ IDEA, PyCharm, WebStorm, GoLand, RustRover, Android Studio, etc.
 
-欢迎提交 Pull Request！
+### 3. Which versions are supported?
+The plugin is developed based on JDK 17 and currently only supports JetBrains IDE version 2022.3 and above
 
-## 开源协议
+### 4. How to modify plugin shortcuts?
+Modify in `Settings` → `Keymap` → `Plugins` → `Switch2Cursor`
 
-本项目采用 MIT 协议 - 详见 [LICENSE](LICENSE) 文件。
+## 📄 License
+This project is licensed under the [MIT License](LICENSE)
 
-## 支持
 
-如果遇到问题或有建议，请在 GitHub 上[创建 issue](https://github.com/qczone/switch2cursor/issues)。
+## 📮 Feedback
+If you encounter any issues or have suggestions, please provide feedback through:
+- [Submit GitHub Issue](https://github.com/qczone/switch2cursor/issues) 
