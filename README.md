@@ -7,7 +7,7 @@
 
 [![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/26309-switch2cursor?label=JetBrains%20Marketplace&style=for-the-badge&logo=intellij-idea)](https://plugins.jetbrains.com/plugin/26309-switch2cursor)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/26309-switch2cursor?style=for-the-badge&logo=intellij-idea)](https://plugins.jetbrains.com/plugin/26309-switch2cursor)
-[![License](https://img.shields.io/github/license/qczone/switch2cursor?style=for-the-badge)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
 ## 🔍 Introduction
 A JetBrains IDE plugin that enhances development efficiency by enabling seamless switching between JetBrains IDE and Cursor
