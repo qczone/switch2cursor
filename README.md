@@ -117,3 +117,7 @@ This project is licensed under the [MIT License](LICENSE)
 ## 📮 Feedback
 If you encounter any issues or have suggestions, please provide feedback through:
 - [Submit GitHub Issue](https://github.com/qczone/switch2cursor/issues) 
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=qczone/switch2cursor&type=Date)](https://star-history.com/#qczone/switch2cursor&Date)

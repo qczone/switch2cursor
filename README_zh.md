@@ -117,3 +117,7 @@ cd switch2cursor
 ## 📮 问题反馈
 如果遇到问题或有建议，请通过以下方式反馈：
 - [提交 GitHub Issue](https://github.com/qczone/switch2cursor/issues)
+
+## 🌟 Star 历史
+
+[![Star History Chart](https://api.star-history.com/svg?repos=qczone/switch2cursor&type=Date)](https://star-history.com/#qczone/switch2cursor&Date)
